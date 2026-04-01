@@ -1223,6 +1223,263 @@ body::before {
 }
 
 /* ================================================================
+   ART — SUB-PROJECT LAYOUT
+   ================================================================ */
+
+.art-section {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--space-lg) var(--space-md) var(--space-xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+}
+
+.art-project {
+    border-top: 1px solid var(--rule);
+    padding-top: var(--space-lg);
+}
+
+.art-project__header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-md);
+    align-items: start;
+}
+
+.art-project__title {
+    font-family: var(--font-serif);
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    font-weight: 700;
+    color: var(--blue-deep);
+    letter-spacing: -0.02em;
+    line-height: 1;
+}
+
+.art-project__desc {
+    font-size: 0.95rem;
+    font-weight: 300;
+    color: var(--ink);
+    line-height: 1.85;
+}
+
+/* ================================================================
+   CAROUSEL
+   ================================================================ */
+
+.carousel {
+    position: relative;
+    background: var(--paper-dark);
+    border: 1px solid rgba(26, 58, 92, 0.1);
+    overflow: hidden;
+}
+
+.carousel__track {
+    display: flex;
+    transition: transform 0.45s cubic-bezier(0.76, 0, 0.24, 1);
+    will-change: transform;
+}
+
+.carousel__slide {
+    min-width: 100%;
+    position: relative;
+    cursor: zoom-in;
+}
+
+.carousel__slide img {
+    width: 100%;
+    height: 560px;
+    object-fit: contain;
+    background: var(--paper);
+    display: block;
+}
+
+.carousel__placeholder {
+    width: 100%;
+    height: 560px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    background-image:
+        linear-gradient(rgba(26, 58, 92, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(26, 58, 92, 0.04) 1px, transparent 1px);
+    background-size: 24px 24px;
+}
+
+.carousel__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    color: var(--blue-deep);
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.5rem;
+    line-height: 1;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+    z-index: 10;
+    opacity: 0.9;
+}
+
+.carousel__btn:hover {
+    background: var(--blue-deep);
+    color: var(--white);
+    border-color: var(--blue-deep);
+}
+
+.carousel__btn:disabled {
+    opacity: 0.2;
+    cursor: default;
+    pointer-events: none;
+}
+
+.carousel__btn--prev { left: var(--space-sm); }
+.carousel__btn--next { right: var(--space-sm); }
+
+.carousel__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 9px var(--space-sm);
+    border-top: 1px solid var(--rule);
+    background: var(--paper);
+    gap: var(--space-md);
+}
+
+.carousel__caption {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.12em;
+    color: var(--ink-light);
+    flex: 1;
+    min-height: 1em;
+}
+
+.carousel__counter {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    color: var(--blue-mid);
+    flex-shrink: 0;
+}
+
+/* ================================================================
+   LIGHTBOX
+   ================================================================ */
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 900;
+    background: rgba(8, 15, 25, 0.97);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.lightbox.is-open {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.lightbox__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-sm);
+    max-width: 92vw;
+    max-height: 92vh;
+}
+
+.lightbox__img {
+    max-width: 90vw;
+    max-height: 82vh;
+    object-fit: contain;
+    display: block;
+}
+
+.lightbox__caption {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.16em;
+    color: rgba(255, 255, 255, 0.4);
+    text-align: center;
+    text-transform: uppercase;
+    min-height: 1em;
+}
+
+.lightbox__close {
+    position: fixed;
+    top: var(--space-md);
+    right: var(--space-md);
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: rgba(255, 255, 255, 0.65);
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background 0.2s, color 0.2s;
+    z-index: 901;
+    font-family: var(--font-mono);
+}
+
+.lightbox__close:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--white);
+}
+
+.lightbox__btn {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: rgba(255, 255, 255, 0.55);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.6rem;
+    line-height: 1;
+    transition: background 0.2s, color 0.2s;
+    z-index: 901;
+}
+
+.lightbox__btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--white);
+}
+
+.lightbox__btn:disabled {
+    opacity: 0.15;
+    cursor: default;
+    pointer-events: none;
+}
+
+.lightbox__btn--prev { left: var(--space-md); }
+.lightbox__btn--next { right: var(--space-md); }
+
+/* ================================================================
    RESPONSIVE
    ================================================================ */
 
@@ -1253,6 +1510,14 @@ body::before {
     :root {
         --space-xl: 4rem;
     }
+
+    .art-project__header { grid-template-columns: 1fr; }
+
+    .carousel__slide img,
+    .carousel__placeholder { height: 320px; }
+
+    .lightbox__btn--prev { left: var(--space-xs); }
+    .lightbox__btn--next { right: var(--space-xs); }
 
     .nav__inner { padding: 0 var(--space-sm); }
     .hero__content { padding-left: var(--space-sm); padding-right: var(--space-sm); }

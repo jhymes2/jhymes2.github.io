@@ -87,110 +87,39 @@
             <div class="page-hero__content">
                 <p class="page-hero__section mono">Art — 02</p>
                 <h1 class="page-hero__title">Printmaking</h1>
-                <div class="page-hero__meta">
-                    <div class="meta-item">
-                        <span class="meta-item__label">Medium</span>
-                        <span class="meta-item__value">Relief &amp; Intaglio</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-item__label">Status</span>
-                        <span class="meta-item__value">Ongoing</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-item__label">Years</span>
-                        <span class="meta-item__value">2020 – Present</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-item__label">Process</span>
-                        <span class="meta-item__value">Woodblock / Etching / Screen</span>
-                    </div>
-                </div>
             </div>
         </header>
 
-        <div class="page-body">
+        <!-- ── ART SECTION ─────────────────────────────── -->
+        <div class="art-section">
 
-            <div class="img-placeholder img-placeholder--hero" aria-label="Gallery hero image placeholder">
-                <span class="img-placeholder__icon">[ Image ]</span>
-            </div>
-
-            <div class="page-columns page-columns--art">
-                <aside class="sidebar-details" aria-label="Work details">
-                    <p class="sidebar-details__label">Medium Notes</p>
-                    <div class="detail-row">
-                        <span class="detail-row__key">Category</span>
-                        <span class="detail-row__val">Works on Paper</span>
-                    </div>
-                    <div class="detail-row">
-                        <span class="detail-row__key">Techniques</span>
-                        <span class="detail-row__val">—</span>
-                    </div>
-                    <div class="detail-row">
-                        <span class="detail-row__key">Inks</span>
-                        <span class="detail-row__val">—</span>
-                    </div>
-                    <div class="detail-row">
-                        <span class="detail-row__key">Editions</span>
-                        <span class="detail-row__val">—</span>
-                    </div>
-                    <div class="detail-row">
-                        <span class="detail-row__key">Duration</span>
-                        <span class="detail-row__val">2020 – Present</span>
-                    </div>
-                </aside>
-
-                <div class="text-block">
-                    <h2>Practice</h2>
-                    <p>
-                        Add an artist statement here. Describe your printmaking practice — the processes you use, what draws you to the medium, and the themes or ideas you're working through.
-                    </p>
-                    <p>
-                        Describe the relationship between the physical matrix (woodblock, plate, screen) and the printed impression — the trace, the edition, the residue.
-                    </p>
-
-                    <h2 style="margin-top: 2rem;">Work</h2>
-                    <p>
-                        Describe series or bodies of work — how images, textures, and methods accumulate into a sustained practice.
+            <!-- Sub-project: Intaglio -->
+            <div class="art-project">
+                <div class="art-project__header">
+                    <h2 class="art-project__title">Intaglio</h2>
+                    <p class="art-project__desc">
+                        An intaglio study in natural processes — capturing subtle transformations in etched plates. A corresponding poem urges conversation with the unsettling nature of the viewer's own humanity.
                     </p>
                 </div>
-            </div>
 
-            <div class="gallery-grid gallery-grid--tall">
-                <div class="gallery-item">
-                    <div class="img-placeholder" style="aspect-ratio:3/4;">
-                        <span class="img-placeholder__icon">[ Image ]</span>
+                <div class="carousel" data-carousel>
+                    <div class="carousel__track">
+                        <div class="carousel__slide">
+                            <div class="carousel__placeholder">[ Image ]</div>
+                        </div>
+                        <div class="carousel__slide">
+                            <div class="carousel__placeholder">[ Image ]</div>
+                        </div>
+                        <div class="carousel__slide">
+                            <div class="carousel__placeholder">[ Image ]</div>
+                        </div>
                     </div>
-                    <p class="gallery-item__caption">Caption goes here</p>
-                </div>
-                <div class="gallery-item">
-                    <div class="img-placeholder" style="aspect-ratio:3/4;">
-                        <span class="img-placeholder__icon">[ Image ]</span>
+                    <button class="carousel__btn carousel__btn--prev" aria-label="Previous image">&#8249;</button>
+                    <button class="carousel__btn carousel__btn--next" aria-label="Next image">&#8250;</button>
+                    <div class="carousel__footer">
+                        <p class="carousel__caption"></p>
+                        <span class="carousel__counter mono"></span>
                     </div>
-                    <p class="gallery-item__caption">Caption goes here</p>
-                </div>
-                <div class="gallery-item">
-                    <div class="img-placeholder" style="aspect-ratio:3/4;">
-                        <span class="img-placeholder__icon">[ Image ]</span>
-                    </div>
-                    <p class="gallery-item__caption">Caption goes here</p>
-                </div>
-                <div class="gallery-item">
-                    <div class="img-placeholder" style="aspect-ratio:3/4;">
-                        <span class="img-placeholder__icon">[ Image ]</span>
-                    </div>
-                    <p class="gallery-item__caption">Caption goes here</p>
-                </div>
-                <div class="gallery-item">
-                    <div class="img-placeholder" style="aspect-ratio:3/4;">
-                        <span class="img-placeholder__icon">[ Image ]</span>
-                    </div>
-                    <p class="gallery-item__caption">Caption goes here</p>
-                </div>
-                <div class="gallery-item">
-                    <div class="img-placeholder" style="aspect-ratio:3/4;">
-                        <span class="img-placeholder__icon">[ Image ]</span>
-                    </div>
-                    <p class="gallery-item__caption">Caption goes here</p>
                 </div>
             </div>
 
@@ -217,6 +146,17 @@
             </div>
         </footer>
 
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Image viewer">
+        <button class="lightbox__close" id="lbClose" aria-label="Close">×</button>
+        <button class="lightbox__btn lightbox__btn--prev" id="lbPrev" aria-label="Previous">&#8249;</button>
+        <div class="lightbox__content">
+            <img class="lightbox__img" id="lbImg" src="" alt="">
+            <p class="lightbox__caption" id="lbCaption"></p>
+        </div>
+        <button class="lightbox__btn lightbox__btn--next" id="lbNext" aria-label="Next">&#8250;</button>
     </div>
 
     <script src="../js/main.js"></script>

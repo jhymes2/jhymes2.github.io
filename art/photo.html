@@ -87,111 +87,39 @@
             <div class="page-hero__content">
                 <p class="page-hero__section mono">Art — 03</p>
                 <h1 class="page-hero__title">Photo</h1>
-                <div class="page-hero__meta">
-                    <div class="meta-item">
-                        <span class="meta-item__label">Medium</span>
-                        <span class="meta-item__value">Film &amp; Darkroom</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-item__label">Status</span>
-                        <span class="meta-item__value">Ongoing</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-item__label">Years</span>
-                        <span class="meta-item__value">2019 – Present</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-item__label">Process</span>
-                        <span class="meta-item__value">Analog / Cyanotype / Digital</span>
-                    </div>
-                </div>
             </div>
         </header>
 
-        <div class="page-body">
+        <!-- ── ART SECTION ─────────────────────────────── -->
+        <div class="art-section">
 
-            <div class="img-placeholder img-placeholder--hero" aria-label="Gallery hero image placeholder">
-                <span class="img-placeholder__icon">[ Image ]</span>
-            </div>
-
-            <div class="page-columns page-columns--art">
-                <aside class="sidebar-details" aria-label="Work details">
-                    <p class="sidebar-details__label">Medium Notes</p>
-                    <div class="detail-row">
-                        <span class="detail-row__key">Category</span>
-                        <span class="detail-row__val">Photography</span>
-                    </div>
-                    <div class="detail-row">
-                        <span class="detail-row__key">Film</span>
-                        <span class="detail-row__val">—</span>
-                    </div>
-                    <div class="detail-row">
-                        <span class="detail-row__key">Cameras</span>
-                        <span class="detail-row__val">—</span>
-                    </div>
-                    <div class="detail-row">
-                        <span class="detail-row__key">Process</span>
-                        <span class="detail-row__val">—</span>
-                    </div>
-                    <div class="detail-row">
-                        <span class="detail-row__key">Duration</span>
-                        <span class="detail-row__val">2019 – Present</span>
-                    </div>
-                </aside>
-
-                <div class="text-block">
-                    <h2>Practice</h2>
-                    <p>
-                        Add an artist statement here. Describe your photographic practice — what you shoot, how you process images, and what the work is concerned with conceptually or aesthetically.
-                    </p>
-                    <p>
-                        Describe the role of process in your photography — darkroom, cyanotype, alternative processes, or the tension between analog and digital.
-                    </p>
-
-                    <h2 style="margin-top: 2rem;">Work</h2>
-                    <p>
-                        Describe series or bodies of work — the subjects, locations, or investigations that anchor the images shown here.
+            <!-- Sub-project: Nature & Light -->
+            <div class="art-project">
+                <div class="art-project__header">
+                    <h2 class="art-project__title">Nature &amp; Light</h2>
+                    <p class="art-project__desc">
+                        Photography with a focus on nature and light — found in long exposures and studies in sunlight.
                     </p>
                 </div>
-            </div>
 
-            <!-- Masonry-style mixed aspect ratios for photography -->
-            <div class="gallery-grid gallery-grid--tall">
-                <div class="gallery-item">
-                    <div class="img-placeholder" style="aspect-ratio:3/2;">
-                        <span class="img-placeholder__icon">[ Image ]</span>
+                <div class="carousel" data-carousel>
+                    <div class="carousel__track">
+                        <div class="carousel__slide">
+                            <div class="carousel__placeholder">[ Image ]</div>
+                        </div>
+                        <div class="carousel__slide">
+                            <div class="carousel__placeholder">[ Image ]</div>
+                        </div>
+                        <div class="carousel__slide">
+                            <div class="carousel__placeholder">[ Image ]</div>
+                        </div>
                     </div>
-                    <p class="gallery-item__caption">Caption goes here</p>
-                </div>
-                <div class="gallery-item">
-                    <div class="img-placeholder" style="aspect-ratio:2/3;">
-                        <span class="img-placeholder__icon">[ Image ]</span>
+                    <button class="carousel__btn carousel__btn--prev" aria-label="Previous image">&#8249;</button>
+                    <button class="carousel__btn carousel__btn--next" aria-label="Next image">&#8250;</button>
+                    <div class="carousel__footer">
+                        <p class="carousel__caption"></p>
+                        <span class="carousel__counter mono"></span>
                     </div>
-                    <p class="gallery-item__caption">Caption goes here</p>
-                </div>
-                <div class="gallery-item">
-                    <div class="img-placeholder" style="aspect-ratio:3/2;">
-                        <span class="img-placeholder__icon">[ Image ]</span>
-                    </div>
-                    <p class="gallery-item__caption">Caption goes here</p>
-                </div>
-                <div class="gallery-item">
-                    <div class="img-placeholder" style="aspect-ratio:1/1;">
-                        <span class="img-placeholder__icon">[ Image ]</span>
-                    </div>
-                    <p class="gallery-item__caption">Caption goes here</p>
-                </div>
-                <div class="gallery-item">
-                    <div class="img-placeholder" style="aspect-ratio:3/2;">
-                        <span class="img-placeholder__icon">[ Image ]</span>
-                    </div>
-                    <p class="gallery-item__caption">Caption goes here</p>
-                </div>
-                <div class="gallery-item">
-                    <div class="img-placeholder" style="aspect-ratio:2/3;">
-                        <span class="img-placeholder__icon">[ Image ]</span>
-                    </div>
-                    <p class="gallery-item__caption">Caption goes here</p>
                 </div>
             </div>
 
@@ -218,6 +146,17 @@
             </div>
         </footer>
 
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Image viewer">
+        <button class="lightbox__close" id="lbClose" aria-label="Close">×</button>
+        <button class="lightbox__btn lightbox__btn--prev" id="lbPrev" aria-label="Previous">&#8249;</button>
+        <div class="lightbox__content">
+            <img class="lightbox__img" id="lbImg" src="" alt="">
+            <p class="lightbox__caption" id="lbCaption"></p>
+        </div>
+        <button class="lightbox__btn lightbox__btn--next" id="lbNext" aria-label="Next">&#8250;</button>
     </div>
 
     <script src="../js/main.js"></script>

@@ -34,7 +34,9 @@
     navClose  && navClose.addEventListener('click', closeNav);
 
     document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape') closeNav();
+        if (e.key === 'Escape') { closeLightbox(); closeNav(); }
+        if (e.key === 'ArrowLeft')  lightboxStep(-1);
+        if (e.key === 'ArrowRight') lightboxStep(1);
     });
 
     /* ----------------------------------------------------------
@@ -47,6 +49,93 @@
 
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
+
+    /* ----------------------------------------------------------
+       Carousels
+    ---------------------------------------------------------- */
+    document.querySelectorAll('[data-carousel]').forEach(function (carousel) {
+        var track    = carousel.querySelector('.carousel__track');
+        var slides   = Array.from(carousel.querySelectorAll('.carousel__slide'));
+        var btnPrev  = carousel.querySelector('.carousel__btn--prev');
+        var btnNext  = carousel.querySelector('.carousel__btn--next');
+        var capEl    = carousel.querySelector('.carousel__caption');
+        var countEl  = carousel.querySelector('.carousel__counter');
+        var total    = slides.length;
+        var idx      = 0;
+
+        function updateCarousel() {
+            track.style.transform = 'translateX(-' + (idx * 100) + '%)';
+            if (btnPrev)  btnPrev.disabled  = idx === 0;
+            if (btnNext)  btnNext.disabled  = idx === total - 1;
+            if (countEl)  countEl.textContent = (idx + 1) + ' / ' + total;
+            if (capEl) {
+                var img = slides[idx] && slides[idx].querySelector('img');
+                capEl.textContent = img ? (img.dataset.caption || img.alt || '') : '';
+            }
+        }
+
+        btnPrev && btnPrev.addEventListener('click', function () { if (idx > 0) { idx--; updateCarousel(); } });
+        btnNext && btnNext.addEventListener('click', function () { if (idx < total - 1) { idx++; updateCarousel(); } });
+
+        slides.forEach(function (slide, i) {
+            var img = slide.querySelector('img');
+            if (!img) return;
+            img.style.cursor = 'zoom-in';
+            img.addEventListener('click', function () { openLightbox(slides, i); });
+        });
+
+        updateCarousel();
+    });
+
+    /* ----------------------------------------------------------
+       Lightbox
+    ---------------------------------------------------------- */
+    var lightbox     = document.getElementById('lightbox');
+    var lbImg        = document.getElementById('lbImg');
+    var lbCaption    = document.getElementById('lbCaption');
+    var lbClose      = document.getElementById('lbClose');
+    var lbPrev       = document.getElementById('lbPrev');
+    var lbNext       = document.getElementById('lbNext');
+    var lbSlides     = [];
+    var lbIdx        = 0;
+
+    function openLightbox(slides, startIdx) {
+        if (!lightbox) return;
+        lbSlides = slides.map(function (s) { return s.querySelector('img'); }).filter(Boolean);
+        lbIdx    = startIdx;
+        updateLightbox();
+        lightbox.classList.add('is-open');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+        if (!lightbox || !lightbox.classList.contains('is-open')) return;
+        lightbox.classList.remove('is-open');
+        lightbox.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    }
+
+    function lightboxStep(dir) {
+        if (!lightbox || !lightbox.classList.contains('is-open')) return;
+        var next = lbIdx + dir;
+        if (next >= 0 && next < lbSlides.length) { lbIdx = next; updateLightbox(); }
+    }
+
+    function updateLightbox() {
+        var img = lbSlides[lbIdx];
+        if (!img || !lbImg) return;
+        lbImg.src = img.src;
+        lbImg.alt = img.alt;
+        if (lbCaption) lbCaption.textContent = img.dataset.caption || img.alt || '';
+        if (lbPrev) lbPrev.disabled = lbIdx === 0;
+        if (lbNext) lbNext.disabled = lbIdx === lbSlides.length - 1;
+    }
+
+    lbClose && lbClose.addEventListener('click', closeLightbox);
+    lbPrev  && lbPrev.addEventListener('click',  function () { lightboxStep(-1); });
+    lbNext  && lbNext.addEventListener('click',  function () { lightboxStep(1); });
+    lightbox && lightbox.addEventListener('click', function (e) { if (e.target === lightbox) closeLightbox(); });
 
     /* ----------------------------------------------------------
        Fade-in on scroll (lightweight intersection observer)
