@@ -90,19 +90,19 @@
                 <div class="page-hero__meta">
                     <div class="meta-item">
                         <span class="meta-item__label">Type</span>
-                        <span class="meta-item__value">Physical Computing</span>
+                        <span class="meta-item__value">Software, Embedded Programming</span>
                     </div>
                     <div class="meta-item">
                         <span class="meta-item__label">Status</span>
-                        <span class="meta-item__value">Complete</span>
+                        <span class="meta-item__value">Ongoing</span>
                     </div>
                     <div class="meta-item">
                         <span class="meta-item__label">Year</span>
-                        <span class="meta-item__value">2024</span>
+                        <span class="meta-item__value">2026 – Present</span>
                     </div>
                     <div class="meta-item">
-                        <span class="meta-item__label">Stack</span>
-                        <span class="meta-item__value">Embedded / ESC/POS</span>
+                        <span class="meta-item__label">Tools</span>
+                        <span class="meta-item__value">VSCode / PlatformIO, Python</span>
                     </div>
                 </div>
             </div>
@@ -118,39 +118,62 @@
                 <div class="text-block">
                     <h2>Overview</h2>
                     <p>
-                        Add project description here. Describe the receipt printer project — what it outputs, what triggers it, and the conceptual or functional motivation behind the build.
-                    </p>
-                    <p>
-                        Add context about the hardware platform, communication protocol, and any software integration that drives the output.
+                        A personal project built around a thermal receipt printer and a microcontroller — a platform for printing ephemeral, physical output from software. Python handles formatting and API calls on the host side; firmware on the microcontroller reads from the serial monitor and drives the printer. Four distinct modes have been built so far, each treating the receipt as a different kind of output medium.
                     </p>
 
-                    <h2 style="margin-top: 2rem;">Process</h2>
+                    <h2 style="margin-top: 2rem;">Modes</h2>
+
+                    <h2 style="font-size:1.1rem; margin-top:1.5rem;">Album Mode</h2>
                     <p>
-                        Describe the build and software development process — from hardware setup through firmware and any connected services.
+                        Uses the Spotify API to pull album data and generate a formatted receipt — tracklist, metadata, and a space for personal notes. Prompts the user for their take on the album, then auto-formats the responses and converts the layout to serial commands uploaded to the microcontroller for printing.
+                    </p>
+
+                    <h2 style="font-size:1.1rem; margin-top:1.5rem;">Poem Mode</h2>
+                    <p>
+                        Takes any poem as input and reformats it to receipt proportions — narrow columns, deliberate line breaks — then sends it to the printer. The receipt as broadside.
+                    </p>
+
+                    <h2 style="font-size:1.1rem; margin-top:1.5rem;">Typewriter Mode</h2>
+                    <p>
+                        Prints a line automatically whenever a newline is written to a watched file, turning the printer into a slow, physical typewriter. Write in the file; the receipt unspools in real time.
+                    </p>
+
+                    <h2 style="font-size:1.1rem; margin-top:1.5rem;">Dictionary Mode</h2>
+                    <p>
+                        Calls a dictionary API and prints the definition of any word on demand — a physical lookup slip.
+                    </p>
+
+                    <h2 style="margin-top: 2rem;">Next</h2>
+                    <p>
+                        A custom enclosure to house the printer cleanly, and an automatic cutter so receipts separate on their own as they feed out.
                     </p>
                 </div>
 
                 <aside class="sidebar-details" aria-label="Project details">
                     <p class="sidebar-details__label">Spec Sheet</p>
                     <div class="detail-row">
-                        <span class="detail-row__key">Category</span>
-                        <span class="detail-row__val">Embedded</span>
-                    </div>
-                    <div class="detail-row">
                         <span class="detail-row__key">Year</span>
-                        <span class="detail-row__val">2024</span>
-                    </div>
-                    <div class="detail-row">
-                        <span class="detail-row__key">Role</span>
-                        <span class="detail-row__val">Designer &amp; Builder</span>
-                    </div>
-                    <div class="detail-row">
-                        <span class="detail-row__key">Protocol</span>
-                        <span class="detail-row__val">ESC/POS</span>
+                        <span class="detail-row__val">2026 – Present</span>
                     </div>
                     <div class="detail-row">
                         <span class="detail-row__key">Output</span>
                         <span class="detail-row__val">Thermal Print</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-row__key">Host Lang.</span>
+                        <span class="detail-row__val">Python</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-row__key">Firmware</span>
+                        <span class="detail-row__val">PlatformIO / VSCode</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-row__key">APIs</span>
+                        <span class="detail-row__val">Spotify, Dictionary</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-row__key">Modes</span>
+                        <span class="detail-row__val">Album, Poem, Typewriter, Dictionary</span>
                     </div>
                 </aside>
             </div>
