@@ -143,6 +143,24 @@
     lightbox && lightbox.addEventListener('click', function (e) { if (e.target === lightbox) closeLightbox(); });
 
     /* ----------------------------------------------------------
+       Photo grid — click to lightbox (no carousel)
+    ---------------------------------------------------------- */
+    var photoGallery = document.querySelector('[data-photo-gallery]');
+    if (photoGallery) {
+        var photoImgs = Array.from(photoGallery.querySelectorAll('img'));
+        photoImgs.forEach(function (img, i) {
+            img.addEventListener('click', function () {
+                lbSlides = photoImgs;
+                lbIdx    = i;
+                updateLightbox();
+                lightbox.classList.add('is-open');
+                lightbox.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+    }
+
+    /* ----------------------------------------------------------
        Fade-in on scroll (lightweight intersection observer)
     ---------------------------------------------------------- */
     const fadeEls = document.querySelectorAll('.proj-card, .discipline__head, .gallery-item');

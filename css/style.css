@@ -1407,6 +1407,40 @@ body::before {
 }
 
 /* ================================================================
+   PHOTO GRID
+   ================================================================ */
+
+.photo-grid {
+    columns: 3;
+    column-gap: var(--space-sm);
+}
+
+.photo-grid__item {
+    break-inside: avoid;
+    margin-bottom: var(--space-sm);
+}
+
+.photo-grid__item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: zoom-in;
+    transition: opacity 0.2s;
+}
+
+.photo-grid__item img:hover {
+    opacity: 0.88;
+}
+
+@media (max-width: 860px) {
+    .photo-grid { columns: 2; }
+}
+
+@media (max-width: 520px) {
+    .photo-grid { columns: 1; }
+}
+
+/* ================================================================
    LIGHTBOX
    ================================================================ */
 
