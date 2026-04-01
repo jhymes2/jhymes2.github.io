@@ -63,6 +63,8 @@
         var total    = slides.length;
         var idx      = 0;
 
+        var dots = Array.from(carousel.querySelectorAll('.carousel__dot'));
+
         function updateCarousel() {
             track.style.transform = 'translateX(-' + (idx * 100) + '%)';
             if (btnPrev)  btnPrev.disabled  = idx === 0;
@@ -72,6 +74,9 @@
                 var img = slides[idx] && slides[idx].querySelector('img');
                 capEl.textContent = img ? (img.dataset.caption || img.alt || '') : '';
             }
+            dots.forEach(function (dot, i) {
+                dot.classList.toggle('is-active', i === idx);
+            });
         }
 
         btnPrev && btnPrev.addEventListener('click', function () { if (idx > 0) { idx--; updateCarousel(); } });

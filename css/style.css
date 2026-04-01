@@ -1235,6 +1235,16 @@ body::before {
     gap: var(--space-xl);
 }
 
+.art-intro {
+    max-width: 640px;
+    font-size: 0.95rem;
+    font-weight: 300;
+    color: var(--ink);
+    line-height: 1.85;
+    padding-bottom: var(--space-md);
+    border-bottom: 1px solid var(--rule);
+}
+
 .art-project {
     border-top: 1px solid var(--rule);
     padding-top: var(--space-lg);
@@ -1372,6 +1382,28 @@ body::before {
     letter-spacing: 0.1em;
     color: var(--blue-mid);
     flex-shrink: 0;
+}
+
+.carousel__dots {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex: 1;
+    justify-content: center;
+}
+
+.carousel__dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--rule);
+    transition: background 0.25s, transform 0.25s;
+    flex-shrink: 0;
+}
+
+.carousel__dot.is-active {
+    background: var(--blue-mid);
+    transform: scale(1.35);
 }
 
 /* ================================================================
