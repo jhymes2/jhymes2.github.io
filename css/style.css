@@ -387,7 +387,6 @@ body::before {
    ================================================================ */
 
 .hero {
-    min-height: 100vh;
     padding-top: var(--nav-height);
     position: relative;
     display: flex;
@@ -427,7 +426,7 @@ body::before {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: var(--space-xl) var(--space-md) var(--space-lg);
+    padding: var(--space-lg) var(--space-md) var(--space-md);
     max-width: var(--max-width);
     margin: 0 auto;
     width: 100%;
@@ -463,15 +462,13 @@ body::before {
     line-height: 0.88;
     color: var(--blue-deep);
     letter-spacing: -0.025em;
-    margin-bottom: var(--space-md);
+    margin-bottom: var(--space-sm);
 }
 
 .hero__name-first {
     display: block;
     font-size: clamp(3.5rem, 9vw, 8rem);
-    font-weight: 400;
-    font-style: italic;
-    color: var(--blue-mid);
+    font-weight: 700;
 }
 
 .hero__name-last {
@@ -485,7 +482,7 @@ body::before {
     align-items: center;
     gap: var(--space-sm);
     max-width: 520px;
-    margin-bottom: var(--space-md);
+    margin-bottom: var(--space-sm);
 }
 
 .hero__rule-line {
@@ -506,7 +503,7 @@ body::before {
     letter-spacing: 0.28em;
     text-transform: uppercase;
     color: var(--ink-light);
-    margin-bottom: var(--space-lg);
+    margin-bottom: var(--space-sm);
 }
 
 /* Monogram Seal */
@@ -545,20 +542,7 @@ body::before {
 }
 
 .hero__scroll {
-    position: absolute;
-    bottom: var(--space-md);
-    left: 50%;
-    transform: translateX(-50%);
-    font-family: var(--font-mono);
-    font-size: 0.6rem;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--ink-light);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 6px;
-    animation: scrollBob 2.4s ease-in-out infinite;
+    display: none;
 }
 
 .hero__scroll-line {
@@ -579,7 +563,7 @@ body::before {
 .main {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: var(--space-xl) var(--space-md);
+    padding: var(--space-md) var(--space-md) var(--space-xl);
 }
 
 /* Chapter label */
@@ -587,7 +571,7 @@ body::before {
     display: flex;
     align-items: center;
     gap: var(--space-md);
-    margin-bottom: var(--space-xl);
+    margin-bottom: var(--space-md);
 }
 
 .chapter-label__line {
@@ -611,7 +595,7 @@ body::before {
 .disciplines {
     display: flex;
     flex-direction: column;
-    gap: var(--space-xl);
+    gap: var(--space-md);
 }
 
 /* Perforated divider between sections */
@@ -677,7 +661,7 @@ body::before {
 
 .discipline__desc {
     margin-left: calc(var(--space-sm) + 2.5rem);
-    margin-bottom: var(--space-lg);
+    margin-bottom: var(--space-sm);
     padding-left: var(--space-sm);
     border-left: 2px solid rgba(26, 58, 92, 0.12);
     max-width: 480px;
@@ -712,7 +696,7 @@ body::before {
     display: block;
     position: relative;
     transition: background 0.22s ease, color 0.22s ease;
-    min-height: 130px;
+    min-height: 90px;
 }
 
 .proj-card:hover {
@@ -1245,6 +1229,30 @@ body::before {
     border-bottom: 1px solid var(--rule);
 }
 
+/* 2-column grid layout for art sections with portrait carousels */
+.art-section--grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: var(--space-lg);
+    row-gap: var(--space-xl);
+}
+
+.art-section--grid .art-intro {
+    grid-column: 1 / -1;
+}
+
+/* In a narrow column, stack title above description */
+.art-section--grid .art-project__header {
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+}
+
+@media (max-width: 760px) {
+    .art-section--grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 .art-project {
     border-top: 1px solid var(--rule);
     padding-top: var(--space-lg);
@@ -1303,6 +1311,11 @@ body::before {
     object-fit: contain;
     background: var(--paper);
     display: block;
+}
+
+.carousel--portrait .carousel__slide img,
+.carousel--portrait .carousel__placeholder {
+    height: min(72vh, 760px);
 }
 
 .carousel__placeholder {
