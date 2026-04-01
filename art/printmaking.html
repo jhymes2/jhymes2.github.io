@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Printmaking — Jonah Hymes Art Portfolio">
+    <title>Printmaking — Jonah Hymes</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;1,300&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        .fade-init { opacity: 0; transform: translateY(12px); transition: opacity 0.5s ease, transform 0.5s ease; }
+        .fade-init.in-view { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body>
+
+    <div class="reg-mark reg-mark--tl" aria-hidden="true"></div>
+    <div class="reg-mark reg-mark--tr" aria-hidden="true"></div>
+    <div class="reg-mark reg-mark--bl" aria-hidden="true"></div>
+    <div class="reg-mark reg-mark--br" aria-hidden="true"></div>
+
+    <nav class="nav" id="siteNav" aria-label="Site navigation">
+        <div class="nav__inner">
+            <a href="../index.html" class="nav__logo" aria-label="Jonah Hymes — Home">
+                <span class="nav__logo-name">Jonah Hymes</span>
+                <span class="nav__logo-sub">Engineering &amp; Fine Art</span>
+            </a>
+            <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navOverlay">
+                <span>Index</span>
+                <span class="nav__toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="nav-overlay" id="navOverlay" aria-hidden="true" role="dialog" aria-label="Site index">
+        <div class="nav-overlay__inner">
+            <div class="nav-overlay__top">
+                <span class="nav-overlay__wordmark">Jonah Hymes</span>
+                <button class="nav-overlay__close" id="navClose">Close &nbsp;×</button>
+            </div>
+            <div class="nav-overlay__body">
+                <div>
+                    <p class="nav-overlay__section-label">Technical</p>
+                    <ul class="nav-overlay__list">
+                        <li><a href="../technical/phillips.html"><span class="nav-item__num">01</span>Phillips</a></li>
+                        <li><a href="../technical/mouse.html"><span class="nav-item__num">02</span>Mouse</a></li>
+                        <li><a href="../technical/miteout.html"><span class="nav-item__num">03</span>Miteout</a></li>
+                        <li><a href="../technical/receipt-printer.html"><span class="nav-item__num">04</span>Receipt Printer</a></li>
+                        <li><a href="../technical/dfr.html"><span class="nav-item__num">05</span>DFR</a></li>
+                        <li><a href="../technical/robotics.html"><span class="nav-item__num">06</span>Robotics</a></li>
+                        <li><a href="../technical/2791.html"><span class="nav-item__num">07</span>2791</a></li>
+                    </ul>
+                </div>
+                <div class="nav-overlay__rule" aria-hidden="true"></div>
+                <div>
+                    <p class="nav-overlay__section-label">Art</p>
+                    <ul class="nav-overlay__list">
+                        <li><a href="../art/glass.html"><span class="nav-item__num">01</span>Glass</a></li>
+                        <li><a href="../art/printmaking.html"><span class="nav-item__num">02</span>Printmaking</a></li>
+                        <li><a href="../art/photo.html"><span class="nav-item__num">03</span>Photo</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-overlay__footer">
+                <a href="mailto:">Contact</a>
+                <span class="nav-overlay__edition">Ed.&nbsp;MMXXVI</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-wrap">
+
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="../index.html">Home</a>
+            <span class="breadcrumb__sep" aria-hidden="true">/</span>
+            <a href="../index.html#work">Art</a>
+            <span class="breadcrumb__sep" aria-hidden="true">/</span>
+            <span class="breadcrumb__current">Printmaking</span>
+        </nav>
+
+        <header class="page-hero">
+            <div class="page-hero__bg" aria-hidden="true"></div>
+            <div class="page-hero__content">
+                <p class="page-hero__section mono">Art — 02</p>
+                <h1 class="page-hero__title">Printmaking</h1>
+                <div class="page-hero__meta">
+                    <div class="meta-item">
+                        <span class="meta-item__label">Medium</span>
+                        <span class="meta-item__value">Relief &amp; Intaglio</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-item__label">Status</span>
+                        <span class="meta-item__value">Ongoing</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-item__label">Years</span>
+                        <span class="meta-item__value">2020 – Present</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-item__label">Process</span>
+                        <span class="meta-item__value">Woodblock / Etching / Screen</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="page-body">
+
+            <div class="img-placeholder img-placeholder--hero" aria-label="Gallery hero image placeholder">
+                <span class="img-placeholder__icon">[ Image ]</span>
+            </div>
+
+            <div class="page-columns page-columns--art">
+                <aside class="sidebar-details" aria-label="Work details">
+                    <p class="sidebar-details__label">Medium Notes</p>
+                    <div class="detail-row">
+                        <span class="detail-row__key">Category</span>
+                        <span class="detail-row__val">Works on Paper</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-row__key">Techniques</span>
+                        <span class="detail-row__val">—</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-row__key">Inks</span>
+                        <span class="detail-row__val">—</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-row__key">Editions</span>
+                        <span class="detail-row__val">—</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-row__key">Duration</span>
+                        <span class="detail-row__val">2020 – Present</span>
+                    </div>
+                </aside>
+
+                <div class="text-block">
+                    <h2>Practice</h2>
+                    <p>
+                        Add an artist statement here. Describe your printmaking practice — the processes you use, what draws you to the medium, and the themes or ideas you're working through.
+                    </p>
+                    <p>
+                        Describe the relationship between the physical matrix (woodblock, plate, screen) and the printed impression — the trace, the edition, the residue.
+                    </p>
+
+                    <h2 style="margin-top: 2rem;">Work</h2>
+                    <p>
+                        Describe series or bodies of work — how images, textures, and methods accumulate into a sustained practice.
+                    </p>
+                </div>
+            </div>
+
+            <div class="gallery-grid gallery-grid--tall">
+                <div class="gallery-item">
+                    <div class="img-placeholder" style="aspect-ratio:3/4;">
+                        <span class="img-placeholder__icon">[ Image ]</span>
+                    </div>
+                    <p class="gallery-item__caption">Caption goes here</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="img-placeholder" style="aspect-ratio:3/4;">
+                        <span class="img-placeholder__icon">[ Image ]</span>
+                    </div>
+                    <p class="gallery-item__caption">Caption goes here</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="img-placeholder" style="aspect-ratio:3/4;">
+                        <span class="img-placeholder__icon">[ Image ]</span>
+                    </div>
+                    <p class="gallery-item__caption">Caption goes here</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="img-placeholder" style="aspect-ratio:3/4;">
+                        <span class="img-placeholder__icon">[ Image ]</span>
+                    </div>
+                    <p class="gallery-item__caption">Caption goes here</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="img-placeholder" style="aspect-ratio:3/4;">
+                        <span class="img-placeholder__icon">[ Image ]</span>
+                    </div>
+                    <p class="gallery-item__caption">Caption goes here</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="img-placeholder" style="aspect-ratio:3/4;">
+                        <span class="img-placeholder__icon">[ Image ]</span>
+                    </div>
+                    <p class="gallery-item__caption">Caption goes here</p>
+                </div>
+            </div>
+
+        </div>
+
+        <nav class="page-nav" aria-label="Project navigation">
+            <a href="glass.html" class="page-nav__link page-nav__link--prev">Glass</a>
+            <a href="../index.html" class="page-nav__home mono">↑ All Work</a>
+            <a href="photo.html" class="page-nav__link page-nav__link--next">Photo</a>
+        </nav>
+
+        <footer class="footer">
+            <div class="footer__perf" aria-hidden="true"></div>
+            <div class="footer__inner">
+                <div class="footer__left">
+                    <p class="footer__name">Jonah Hymes</p>
+                    <p class="footer__sub">Engineering &amp; Fine Art</p>
+                </div>
+                <div class="footer__ornament" aria-hidden="true">◆</div>
+                <div class="footer__right">
+                    <p class="footer__contact"><a href="mailto:">Get in touch →</a></p>
+                    <p class="footer__edition mono">Ed.&nbsp;MMXXVI</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
