@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mouse — Jonah Hymes Technical Portfolio">
-    <title>Mouse — Jonah Hymes</title>
+    <meta name="description" content="Micromouse — Jonah Hymes Technical Portfolio">
+    <title>Micromouse — Jonah Hymes</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -79,18 +79,18 @@
             <span class="breadcrumb__sep" aria-hidden="true">/</span>
             <a href="../index.html#work">Technical</a>
             <span class="breadcrumb__sep" aria-hidden="true">/</span>
-            <span class="breadcrumb__current">Mouse</span>
+            <span class="breadcrumb__current">Micromouse</span>
         </nav>
 
         <header class="page-hero">
             <div class="page-hero__bg" aria-hidden="true"></div>
             <div class="page-hero__content">
                 <p class="page-hero__section mono">Technical — 02</p>
-                <h1 class="page-hero__title">Mouse</h1>
+                <h1 class="page-hero__title">Micromouse</h1>
                 <div class="page-hero__meta">
                     <div class="meta-item">
                         <span class="meta-item__label">Type</span>
-                        <span class="meta-item__value">Industrial Design</span>
+                        <span class="meta-item__value">Electrical Design, PCB Layout, Embedded Programming</span>
                     </div>
                     <div class="meta-item">
                         <span class="meta-item__label">Status</span>
@@ -98,11 +98,11 @@
                     </div>
                     <div class="meta-item">
                         <span class="meta-item__label">Year</span>
-                        <span class="meta-item__value">2024</span>
+                        <span class="meta-item__value">2024 – 2025</span>
                     </div>
                     <div class="meta-item">
                         <span class="meta-item__label">Stack</span>
-                        <span class="meta-item__value">Hardware / CAD</span>
+                        <span class="meta-item__value">Hardware / CAD / Software</span>
                     </div>
                 </div>
             </div>
@@ -110,23 +110,24 @@
 
         <div class="page-body">
 
-            <div class="img-placeholder img-placeholder--hero" aria-label="Project hero image placeholder">
-                <span class="img-placeholder__icon">[ Image ]</span>
-            </div>
+            <img src="../images/Mouse/IMG_7277.png" alt="Micromouse PCB — final 3D render, angled view" style="width:100%; display:block; margin-bottom: var(--space-xl); border: 1px solid rgba(26,58,92,0.1);">
 
             <div class="page-columns">
                 <div class="text-block">
                     <h2>Overview</h2>
                     <p>
-                        Add project description here. Describe what this mouse project is — custom ergonomic housing, sensor integration, firmware, and the motivations behind the design.
+                        Designed 10+ custom STM32-based micromouse PCBs for Dartmouth graduate classes, replacing bulky development kits to cut costs and tailor hardware to course requirements. The board integrates dual motors, encoders, an IMU, distance sensors, and Wi-Fi — all on a compact footprint purpose-built for maze-solving robotics.
                     </p>
                     <p>
-                        Add additional context about the build process, form factor decisions, and how human-factors thinking shaped the final design.
+                        Integrated and debugged PWM, SPI, I2C, and UART communication across all peripherals using oscilloscope, multimeter, and STM32CubeIDE. The platform enabled graduate students to program 3–5 micromouse robots to autonomously map mazes via Wi-Fi coordination.
+                    </p>
+                    <p>
+                        Components were specified and PCB layouts optimized in KiCad for compactness and manufacturing reliability.
                     </p>
 
                     <h2 style="margin-top: 2rem;">Process</h2>
                     <p>
-                        Describe the prototyping and iteration stages — from initial sketches to CAD models, 3D printing, and final assembly.
+                        Began by working with students and the course instructor to understand the constraints and failure modes of the existing mice, then produced a requirements list from that audit. Electrical components were sourced individually and bench-tested to confirm they met spec before committing to layout. The PCB was designed in KiCad around those validated components, followed by firmware development to bring all peripherals under unified software control.
                     </p>
                 </div>
 
@@ -134,45 +135,47 @@
                     <p class="sidebar-details__label">Spec Sheet</p>
                     <div class="detail-row">
                         <span class="detail-row__key">Category</span>
-                        <span class="detail-row__val">Hardware</span>
+                        <span class="detail-row__val">PCB / Embedded</span>
                     </div>
                     <div class="detail-row">
                         <span class="detail-row__key">Year</span>
-                        <span class="detail-row__val">2024</span>
+                        <span class="detail-row__val">2024 – 2025</span>
                     </div>
                     <div class="detail-row">
                         <span class="detail-row__key">Role</span>
                         <span class="detail-row__val">Designer &amp; Builder</span>
                     </div>
                     <div class="detail-row">
-                        <span class="detail-row__key">Tools</span>
-                        <span class="detail-row__val">—</span>
+                        <span class="detail-row__key">MCU</span>
+                        <span class="detail-row__val">STM32</span>
                     </div>
                     <div class="detail-row">
-                        <span class="detail-row__key">Materials</span>
-                        <span class="detail-row__val">—</span>
+                        <span class="detail-row__key">Tools</span>
+                        <span class="detail-row__val">KiCad, STM32CubeIDE, Onshape</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-row__key">Comms</span>
+                        <span class="detail-row__val">PWM, SPI, I2C, UART, Wi-Fi</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-row__key">Quantity</span>
+                        <span class="detail-row__val">10+ boards</span>
                     </div>
                 </aside>
             </div>
 
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <div class="img-placeholder" style="aspect-ratio:4/3;">
-                        <span class="img-placeholder__icon">[ Image ]</span>
-                    </div>
-                    <p class="gallery-item__caption">Caption goes here</p>
+                    <img src="../images/Mouse/IMG_3575.png" alt="Micromouse PCB — component placement render, top view" style="width:100%; aspect-ratio:4/3; object-fit:cover;">
+                    <p class="gallery-item__caption">Component placement — 3D render, top view</p>
                 </div>
                 <div class="gallery-item">
-                    <div class="img-placeholder" style="aspect-ratio:4/3;">
-                        <span class="img-placeholder__icon">[ Image ]</span>
-                    </div>
-                    <p class="gallery-item__caption">Caption goes here</p>
+                    <img src="../images/Mouse/IMG_3599.png" alt="Micromouse PCB — KiCad routing layout" style="width:100%; aspect-ratio:4/3; object-fit:cover;">
+                    <p class="gallery-item__caption">PCB routing layout — KiCad</p>
                 </div>
                 <div class="gallery-item">
-                    <div class="img-placeholder" style="aspect-ratio:4/3;">
-                        <span class="img-placeholder__icon">[ Image ]</span>
-                    </div>
-                    <p class="gallery-item__caption">Caption goes here</p>
+                    <img src="../images/Mouse/IMG_7277.png" alt="Micromouse PCB — final 3D render, perspective" style="width:100%; aspect-ratio:4/3; object-fit:cover;">
+                    <p class="gallery-item__caption">Final board — 3D render, perspective view</p>
                 </div>
             </div>
 

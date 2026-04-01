@@ -1,0 +1,22 @@
+Title: Micromouse
+Type: Electrical Design, PCB Layout, Embedded Programming
+Status: Complete
+Year: 2024 - 2025
+Stack: Hardware / CAD / Software
+Tools: STM32CubeIDE, KiCad, Onshape, General Lab Debugging Tools
+
+
+•Designed 10+ custom STM32-based micromouse PCBs for Dartmouth graduate classes, replacing bulky
+development kits to cut costs and tailor hardware to course requirements.
+• Integrated and debugged PWM, SPI, I2C, and UART communication for dual motors, encoders, IMU, distance
+sensors, and Wi-Fi modules using oscilloscope, multimeter, and STM32CubeIDE.
+• Enabled graduate students to program 3–5 micromouse robots to autonomously map mazes via Wi-Fi coordination.
+• Specified components and optimized PCB layouts in KiCad for compactness and reliability.
+
+
+Process: - to be expanded upon
+-Worked with students and Class instructor to understamd old mice and make a requirments lsit
+-source electrical components according to requirments
+-test electrical components individually to ensure they fir requirments
+-design PCB with components
+-Create software to control all comonents
