@@ -1,0 +1,24 @@
+Title: Miteout Founder and CTO
+Status: Ongoing
+Year: 2023 - Present
+Stack: Hardware / CAD / Software / Entreprenuership
+Tools: VSCode / PlatformIO, KiCad, Onshape
+
+• Engineered three custom PCB iterations in KiCad to integrate 12+ sensors (weight, current/voltage, temperature,
+humidity, RTC, solar/battery management) with 3 DC motors for automated mite treatment in beehives.
+• Developed C++ firmware (ESP32 + Wi-Fi) for wireless data logging of hive metrics, designing acquisition systems
+and embedded algorithms to improve reliability of health monitoring and treatment automation.
+• Raised $8,000+ in funding; pitched and won multiple national competitions including Hult Prize (National
+Finalist), Dartmouth Social Blueprint Challenge (Winner), Siena College Business Plan Competition (Winner) and
+Thomas Edison Pitch Contest (2nd Place).nd UART communication for dual motors, encoders, IMU, distance
+sensors, and Wi-Fi modules using oscilloscope, multimeter, and STM32CubeIDE.
+• Enabled graduate students to program 3–5 micromouse robots to autonomously map mazes via Wi-Fi coordination.
+• Specified components and optimized PCB layouts in KiCad for compactness and reliability.
+
+Process: - to be expanded upon
+
+- Found crucial need in a critial pillar of agraculture, beekeeping
+  -Interviewed numerpus beekeepers to define key pain points
+  -Created multiple product iterations beofre settling on an MVP
+  -Brought our ideas to pitch competitons to raise funding
+  -Continuoually improving device and company

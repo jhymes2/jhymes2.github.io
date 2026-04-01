@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Miteout — Jonah Hymes Technical Portfolio">
-    <title>Miteout — Jonah Hymes</title>
+    <meta name="description" content="MiteOut — Jonah Hymes Technical Portfolio">
+    <title>MiteOut — Jonah Hymes</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -79,30 +79,30 @@
             <span class="breadcrumb__sep" aria-hidden="true">/</span>
             <a href="../index.html#work">Technical</a>
             <span class="breadcrumb__sep" aria-hidden="true">/</span>
-            <span class="breadcrumb__current">Miteout</span>
+            <span class="breadcrumb__current">MiteOut</span>
         </nav>
 
         <header class="page-hero">
             <div class="page-hero__bg" aria-hidden="true"></div>
             <div class="page-hero__content">
                 <p class="page-hero__section mono">Technical — 03</p>
-                <h1 class="page-hero__title">Miteout</h1>
+                <h1 class="page-hero__title">MiteOut</h1>
                 <div class="page-hero__meta">
                     <div class="meta-item">
                         <span class="meta-item__label">Type</span>
-                        <span class="meta-item__value">Autonomous Systems</span>
+                        <span class="meta-item__value">PCB Design, Embedded Systems, Entrepreneurship</span>
                     </div>
                     <div class="meta-item">
                         <span class="meta-item__label">Status</span>
-                        <span class="meta-item__value">Complete</span>
+                        <span class="meta-item__value">Ongoing</span>
                     </div>
                     <div class="meta-item">
                         <span class="meta-item__label">Year</span>
-                        <span class="meta-item__value">2024</span>
+                        <span class="meta-item__value">2023 – Present</span>
                     </div>
                     <div class="meta-item">
                         <span class="meta-item__label">Stack</span>
-                        <span class="meta-item__value">Hardware / Software</span>
+                        <span class="meta-item__value">Hardware / CAD / Software / Entrepreneurship</span>
                     </div>
                 </div>
             </div>
@@ -110,69 +110,91 @@
 
         <div class="page-body">
 
-            <div class="img-placeholder img-placeholder--hero" aria-label="Project hero image placeholder">
-                <span class="img-placeholder__icon">[ Image ]</span>
-            </div>
+            <img src="../images/MiteOut/IMG_6636.png" alt="MiteOut assembled data unit — PCB inside enclosure, held in hand" style="width:100%; display:block; margin-bottom: var(--space-xl); border: 1px solid rgba(26,58,92,0.1);">
 
             <div class="page-columns">
                 <div class="text-block">
                     <h2>Overview</h2>
                     <p>
-                        Add project description here. Describe what Miteout is, the problem it addresses, and the technical approach taken.
+                        MiteOut is a precision agriculture startup building autonomous treatment hardware for varroa mite infestations in domestic beehives. As Founder and CTO, I engineered three custom PCB iterations in KiCad integrating 12+ sensors — weight, current/voltage, temperature, humidity, RTC, and solar/battery management — alongside 3 DC motors for automated miticide dosing.
                     </p>
                     <p>
-                        Add additional context about the system architecture, sensor choices, and how detection and response were designed.
+                        Firmware is written in C++ on an ESP32 with Wi-Fi, enabling wireless data logging of hive health metrics. Embedded acquisition systems and control algorithms monitor hive conditions continuously and trigger treatment autonomously, removing the guesswork and labor burden from beekeepers.
+                    </p>
+                    <p>
+                        The company has raised $8,000+ in funding through national competitions: Hult Prize (National Finalist), Dartmouth Social Blueprint Challenge (Winner), Siena College Business Plan Competition (Winner), and Thomas Edison Pitch Contest (2nd Place).
                     </p>
 
                     <h2 style="margin-top: 2rem;">Process</h2>
                     <p>
-                        Describe the development process — research, prototyping, testing, and field validation.
+                        The project began with identifying a critical need in beekeeping — varroa mite infestations are the leading cause of domestic honeybee colony collapse. Extensive beekeeper interviews defined the core pain points: treatment timing is difficult to judge, application is labor-intensive, and most hobbyists lack the tools to monitor hive health quantitatively.
+                    </p>
+                    <p>
+                        Multiple product iterations followed, from breadboarded prototypes to custom-fabricated PCBs, before converging on the current MVP. Alongside hardware development, competition pitching served as both a funding mechanism and a forcing function for refining the product story. Development and deployment are ongoing.
                     </p>
                 </div>
 
                 <aside class="sidebar-details" aria-label="Project details">
                     <p class="sidebar-details__label">Spec Sheet</p>
                     <div class="detail-row">
-                        <span class="detail-row__key">Category</span>
-                        <span class="detail-row__val">Autonomous</span>
+                        <span class="detail-row__key">Role</span>
+                        <span class="detail-row__val">Founder &amp; CTO</span>
                     </div>
                     <div class="detail-row">
                         <span class="detail-row__key">Year</span>
-                        <span class="detail-row__val">2024</span>
+                        <span class="detail-row__val">2023 – Present</span>
                     </div>
                     <div class="detail-row">
-                        <span class="detail-row__key">Role</span>
-                        <span class="detail-row__val">Designer &amp; Builder</span>
+                        <span class="detail-row__key">MCU</span>
+                        <span class="detail-row__val">ESP32 (Wi-Fi)</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-row__key">Sensors</span>
+                        <span class="detail-row__val">12+ (weight, temp, humidity, V/I, RTC)</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-row__key">PCB Revisions</span>
+                        <span class="detail-row__val">3 iterations</span>
                     </div>
                     <div class="detail-row">
                         <span class="detail-row__key">Tools</span>
-                        <span class="detail-row__val">—</span>
+                        <span class="detail-row__val">KiCad, VSCode / PlatformIO, Onshape</span>
                     </div>
                     <div class="detail-row">
-                        <span class="detail-row__key">Materials</span>
-                        <span class="detail-row__val">—</span>
+                        <span class="detail-row__key">Funding</span>
+                        <span class="detail-row__val">$8,000+ raised</span>
                     </div>
                 </aside>
             </div>
 
-            <div class="gallery-grid">
+            <div class="gallery-grid gallery-grid--tall">
                 <div class="gallery-item">
-                    <div class="img-placeholder" style="aspect-ratio:4/3;">
-                        <span class="img-placeholder__icon">[ Image ]</span>
-                    </div>
-                    <p class="gallery-item__caption">Caption goes here</p>
+                    <img src="../images/MiteOut/IMG_0967.png" alt="MiteOut Data Unit V1.0 — PCB render" style="width:100%; aspect-ratio:4/3; object-fit:cover;">
+                    <p class="gallery-item__caption">Data Unit V1.0 — PCB render</p>
                 </div>
                 <div class="gallery-item">
-                    <div class="img-placeholder" style="aspect-ratio:4/3;">
-                        <span class="img-placeholder__icon">[ Image ]</span>
-                    </div>
-                    <p class="gallery-item__caption">Caption goes here</p>
+                    <img src="../images/MiteOut/IMG_2213.png" alt="MiteOut Data Logging Modules V1.0 — PCB render" style="width:100%; aspect-ratio:4/3; object-fit:cover;">
+                    <p class="gallery-item__caption">Data Logging Modules V1.0 — PCB render</p>
                 </div>
                 <div class="gallery-item">
-                    <div class="img-placeholder" style="aspect-ratio:4/3;">
-                        <span class="img-placeholder__icon">[ Image ]</span>
-                    </div>
-                    <p class="gallery-item__caption">Caption goes here</p>
+                    <img src="../images/MiteOut/IMG_0204.png" alt="Early prototype — bench wiring and debugging" style="width:100%; aspect-ratio:4/3; object-fit:cover;">
+                    <p class="gallery-item__caption">Early prototype — bench debugging</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/MiteOut/IMG_3177.png" alt="Field deployment — solar panel and sensor nodes" style="width:100%; aspect-ratio:4/3; object-fit:cover;">
+                    <p class="gallery-item__caption">Field deployment — solar-powered sensor array</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/MiteOut/IMG_4209.png" alt="Hult Prize — pitch presentation on stage" style="width:100%; aspect-ratio:4/3; object-fit:cover;">
+                    <p class="gallery-item__caption">Hult Prize — National Finalist pitch</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/MiteOut/IMG_1494.png" alt="Competition — founders with hive display and MiteOut banner" style="width:100%; aspect-ratio:4/3; object-fit:cover;">
+                    <p class="gallery-item__caption">Competition demo with full hive display</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/MiteOut/IMG_2970.png" alt="Poster presentation — A Technology to Autonomously Dose Chemical Miticides" style="width:100%; aspect-ratio:4/3; object-fit:cover;">
+                    <p class="gallery-item__caption">Early poster presentation — problem + solution</p>
                 </div>
             </div>
 
