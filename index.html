@@ -12,35 +12,24 @@
     <link rel="stylesheet" href="css/style.css">
 
     <style>
-        /* Fade-in animation used by main.js */
-        .fade-init {
-            opacity: 0;
-            transform: translateY(12px);
-            transition: opacity 0.5s ease, transform 0.5s ease;
-        }
-        .fade-init.in-view {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        .fade-init { opacity: 0; transform: translateY(12px); transition: opacity 0.5s ease, transform 0.5s ease; }
+        .fade-init.in-view { opacity: 1; transform: translateY(0); }
     </style>
 </head>
 <body>
 
-    <!-- Registration marks (printmaking reference) -->
     <div class="reg-mark reg-mark--tl" aria-hidden="true"></div>
     <div class="reg-mark reg-mark--tr" aria-hidden="true"></div>
     <div class="reg-mark reg-mark--bl" aria-hidden="true"></div>
     <div class="reg-mark reg-mark--br" aria-hidden="true"></div>
 
-    <!-- ============================================================
-         NAVIGATION
-    ============================================================ -->
     <nav class="nav" id="siteNav" aria-label="Site navigation">
         <div class="nav__inner">
             <a href="index.html" class="nav__logo" aria-label="Jonah Hymes — Home">
                 <span class="nav__logo-name">Jonah Hymes</span>
                 <span class="nav__logo-sub">Engineering &amp; Fine Art</span>
             </a>
+            <a href="about.html" class="nav__about mono">About</a>
             <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navOverlay">
                 <span>Index</span>
                 <span class="nav__toggle-bars" aria-hidden="true">
@@ -50,18 +39,13 @@
         </div>
     </nav>
 
-    <!-- Full-screen nav overlay -->
     <div class="nav-overlay" id="navOverlay" aria-hidden="true" role="dialog" aria-label="Site index">
         <div class="nav-overlay__inner">
-
             <div class="nav-overlay__top">
                 <span class="nav-overlay__wordmark">Jonah Hymes</span>
                 <button class="nav-overlay__close" id="navClose">Close &nbsp;×</button>
             </div>
-
             <div class="nav-overlay__body">
-
-                <!-- Technical column -->
                 <div>
                     <p class="nav-overlay__section-label">Technical</p>
                     <ul class="nav-overlay__list">
@@ -69,32 +53,27 @@
                         <li><a href="technical/mouse.html"><span class="nav-item__num">02</span>Micromouse</a></li>
                         <li><a href="technical/miteout.html"><span class="nav-item__num">03</span>Miteout</a></li>
                         <li><a href="technical/receipt-printer.html"><span class="nav-item__num">04</span>Receipt Printer</a></li>
-                        <li><a href="technical/dfr.html"><span class="nav-item__num">05</span>Dartmouth Formula Racing</a></li>
-                        <li><a href="technical/robotics.html"><span class="nav-item__num">06</span>Dartmouth Students' Robotics Team</a></li>
-                        <li><a href="technical/2791.html"><span class="nav-item__num">07</span>FRC 2791</a></li>
+                        <li><a href="technical/dfr.html"><span class="nav-item__num">05</span>DFR</a></li>
+                        <li><a href="technical/robotics.html"><span class="nav-item__num">06</span>DSRT</a></li>
+                        <li><a href="technical/2791.html"><span class="nav-item__num">07</span>2791</a></li>
+                        <li><a href="technical/bridges.html"><span class="nav-item__num">08</span>Bridges</a></li>
                     </ul>
                 </div>
-
-                <!-- Vertical rule -->
                 <div class="nav-overlay__rule" aria-hidden="true"></div>
-
-                <!-- Art column -->
                 <div>
                     <p class="nav-overlay__section-label">Art</p>
                     <ul class="nav-overlay__list">
-                        <li><a href="art/glass.html"><span class="nav-item__num">01</span>Glass</a></li>
+                        <li><a href="art/glass.html"><span class="nav-item__num">01</span>Stained Glass</a></li>
                         <li><a href="art/printmaking.html"><span class="nav-item__num">02</span>Printmaking</a></li>
                         <li><a href="art/photo.html"><span class="nav-item__num">03</span>Photography</a></li>
                     </ul>
                 </div>
-
             </div>
-
             <div class="nav-overlay__footer">
-                <a href="mailto:">Contact</a>
+                <a href="about.html">About</a>
+                <a href="mailto:jonah.d.hymes.28@dartmouth.edu">Contact</a>
                 <span class="nav-overlay__edition">Ed.&nbsp;MMXXVI</span>
             </div>
-
         </div>
     </div>
 
@@ -107,219 +86,119 @@
 
         <div class="hero__content">
 
-            <div class="hero__eyebrow">
-                <span class="hero__eyebrow-label mono">Portfolio</span>
-                <span class="hero__eyebrow-date mono">MMXXVI</span>
+            <div class="hero__text">
+                <div class="hero__eyebrow">
+                    <span class="hero__eyebrow-label mono">Portfolio</span>
+                    <span class="hero__eyebrow-date mono"> </span>
+                </div>
+
+                <h1 class="hero__name">
+                    <span class="hero__name-first">Jonah</span>
+                    <span class="hero__name-last">Hymes</span>
+                </h1>
+
+                <div class="hero__rule" aria-hidden="true">
+                    <div class="hero__rule-line"></div>
+                    <div class="hero__rule-ornament">◆ ◆ ◆</div>
+                    <div class="hero__rule-line"></div>
+                </div>
+
+                <p class="hero__tagline">Engineering &amp; Fine Art</p>
             </div>
 
-            <h1 class="hero__name">
-                <span class="hero__name-first">Jonah</span>
-                <span class="hero__name-last">Hymes</span>
-            </h1>
-
-            <div class="hero__rule" aria-hidden="true">
-                <div class="hero__rule-line"></div>
-                <div class="hero__rule-ornament">◆ ◆ ◆</div>
-                <div class="hero__rule-line"></div>
+            <div class="hero__aside">
+                <img src="images/About%20me/headshot.jpg" alt="Jonah Hymes" class="hero__headshot">
             </div>
 
-            <p class="hero__tagline">Engineering &amp; Fine Art</p>
-
-            <div class="hero__seal">
-                <div class="seal" aria-hidden="true">JH</div>
-            </div>
-
-        </div>
-
-        <div class="hero__scroll" aria-hidden="true">
-            <span class="mono">Scroll</span>
-            <div class="hero__scroll-line"></div>
         </div>
     </section>
 
     <!-- ============================================================
-         MAIN — Work Index
+         MAIN
     ============================================================ -->
-    <main class="main" id="work">
+    <main class="main">
 
-        <div class="chapter-label" aria-hidden="true">
-            <div class="chapter-label__line"></div>
-            <span class="chapter-label__text">Work</span>
-            <div class="chapter-label__line"></div>
-        </div>
+        <!-- ── ABOUT ───────────────────────────────────── -->
+        <section class="landing-about" aria-label="About">
+            <div class="landing-about__text">
+                <p>Innovative engineering student with experience in robotics, entrepreneurship, and sustainable technology. Raised in upstate New York — passionate about the outdoors and designing solutions with a positive impact on natural environments.</p>
+            </div>
+            <div class="landing-about__actions">
+                <a href="about.html" class="landing-about__link mono">Full bio →</a>
+                <a href="Jonah%20Hymes.pdf" class="landing-resume mono" target="_blank" rel="noopener">Resume ↗</a>
+            </div>
+        </section>
 
-        <div class="disciplines">
+        <!-- ── EXPERIENCE ──────────────────────────────── -->
+        <section aria-labelledby="experience-heading">
 
-            <!-- ── PROFESSIONAL EXPERIENCE ────────────────────── -->
-            <section aria-labelledby="experience-heading">
-
-                <div class="discipline__head">
-                    <span class="discipline__num mono">I.</span>
-                    <h2 class="discipline__title" id="experience-heading">Experience</h2>
-                    <div class="discipline__rule" aria-hidden="true"></div>
-                </div>
-
-                <div class="discipline__desc">
-                    <p>Professional and entrepreneurial engineering work — internships, startups, and client-facing technical roles.</p>
-                </div>
-
-                <div class="project-grid project-grid--3" role="list">
-
-                    <a href="technical/phillips.html" class="proj-card" role="listitem">
-                        <div class="proj-card__inner">
-                            <span class="proj-card__num">01</span>
-                            <h3 class="proj-card__title">Philips Healthcare</h3>
-                            <p class="proj-card__role">Manufacturing Engineering Intern</p>
-                            <span class="proj-card__arrow" aria-hidden="true">→</span>
-                        </div>
-                    </a>
-
-                    <a href="technical/miteout.html" class="proj-card" role="listitem">
-                        <div class="proj-card__inner">
-                            <span class="proj-card__num">02</span>
-                            <h3 class="proj-card__title">MiteOut</h3>
-                            <p class="proj-card__role">Founder &amp; CTO<br> </p>
-                            <span class="proj-card__arrow" aria-hidden="true">→</span>
-                        </div>
-                    </a>
-
-                    <a href="technical/mouse.html" class="proj-card" role="listitem">
-                        <div class="proj-card__inner">
-                            <span class="proj-card__num">03</span>
-                            <h3 class="proj-card__title">Micromouse</h3>
-                            <p class="proj-card__role">Electrical Designer &amp; Developer</p>
-                            <span class="proj-card__arrow" aria-hidden="true">→</span>
-                        </div>
-                    </a>
-
-                </div>
-            </section>
-
-            <!-- Perforated sub-divider -->
-            <div class="discipline-divider" aria-hidden="true">
-                <div class="discipline-divider__line"></div>
-                <span class="discipline-divider__glyph">· · ·</span>
-                <div class="discipline-divider__line"></div>
+            <div class="discipline__head">
+                <span class="discipline__num mono">I.</span>
+                <h2 class="discipline__title" id="experience-heading">Experience</h2>
+                <div class="discipline__rule" aria-hidden="true"></div>
             </div>
 
-            <!-- ── PROJECTS ───────────────────────────────────── -->
-            <section aria-labelledby="projects-heading">
-
-                <div class="discipline__head">
-                    <span class="discipline__num mono">II.</span>
-                    <h2 class="discipline__title" id="projects-heading">Projects</h2>
-                    <div class="discipline__rule" aria-hidden="true"></div>
-                </div>
-
-                <div class="discipline__desc">
-                    <p>Independent builds, competition teams, and personal engineering work.</p>
-                </div>
-
-                <div class="project-grid project-grid--5" role="list">
-
-                    <a href="technical/dfr.html" class="proj-card" role="listitem">
-                        <div class="proj-card__inner">
-                            <span class="proj-card__num">01</span>
-                            <h3 class="proj-card__title">DFR</h3>
-                            <p class="proj-card__role">Low Voltage Electrical Team</p>
-                            <span class="proj-card__arrow" aria-hidden="true">→</span>
-                        </div>
-                    </a>
-
-                    <a href="technical/robotics.html" class="proj-card" role="listitem">
-                        <div class="proj-card__inner">
-                            <span class="proj-card__num">02</span>
-                            <h3 class="proj-card__title">DSRT</h3>
-                            <p class="proj-card__role">Mechanical Lead &amp; Treasurer</p>
-                            <span class="proj-card__arrow" aria-hidden="true">→</span>
-                        </div>
-                    </a>
-
-                    <a href="technical/2791.html" class="proj-card" role="listitem">
-                        <div class="proj-card__inner">
-                            <span class="proj-card__num">03</span>
-                            <h3 class="proj-card__title">FRC 2791</h3>
-                            <p class="proj-card__role">Team Manager &amp; Mechanical Lead</p>
-                            <span class="proj-card__arrow" aria-hidden="true">→</span>
-                        </div>
-                    </a>
-
-                    <a href="technical/receipt-printer.html" class="proj-card" role="listitem">
-                        <div class="proj-card__inner">
-                            <span class="proj-card__num">04</span>
-                            <h3 class="proj-card__title">Receipt Printer</h3>
-                            <p class="proj-card__role">Personal Project</p>
-                            <span class="proj-card__arrow" aria-hidden="true">→</span>
-                        </div>
-                    </a>
-
-                    <a href="technical/bridges.html" class="proj-card" role="listitem">
-                        <div class="proj-card__inner">
-                            <span class="proj-card__num">05</span>
-                            <h3 class="proj-card__title">Bridges</h3>
-                            <p class="proj-card__role">School Projects</p>
-                            <span class="proj-card__arrow" aria-hidden="true">→</span>
-                        </div>
-                    </a>
-
-                </div>
-            </section>
-
-            <!-- Perforated divider -->
-            <div class="discipline-divider" aria-hidden="true">
-                <div class="discipline-divider__line"></div>
-                <span class="discipline-divider__glyph">× × ×</span>
-                <div class="discipline-divider__line"></div>
+            <div class="discipline__desc">
+                <p>Professional and entrepreneurial engineering work — internships, startups, and client-facing technical roles.</p>
             </div>
 
-            <!-- ── ART ──────────────────────────────────────── -->
-            <section aria-labelledby="art-heading">
+            <div class="project-grid project-grid--3" role="list">
 
-                <div class="discipline__head">
-                    <span class="discipline__num mono">III.</span>
-                    <h2 class="discipline__title" id="art-heading">Art</h2>
-                    <div class="discipline__rule" aria-hidden="true"></div>
+                <a href="technical/phillips.html" class="proj-card" role="listitem">
+                    <div class="proj-card__inner">
+                        <span class="proj-card__num">01</span>
+                        <h3 class="proj-card__title">Philips Healthcare</h3>
+                        <p class="proj-card__role">Manufacturing Engineering Intern</p>
+                        <span class="proj-card__arrow" aria-hidden="true">→</span>
+                    </div>
+                </a>
+
+                <a href="technical/miteout.html" class="proj-card" role="listitem">
+                    <div class="proj-card__inner">
+                        <span class="proj-card__num">02</span>
+                        <h3 class="proj-card__title">MiteOut</h3>
+                        <p class="proj-card__role">Founder &amp; CTO</p>
+                        <span class="proj-card__arrow" aria-hidden="true">→</span>
+                    </div>
+                </a>
+
+                <a href="technical/mouse.html" class="proj-card" role="listitem">
+                    <div class="proj-card__inner">
+                        <span class="proj-card__num">03</span>
+                        <h3 class="proj-card__title">Micromouse</h3>
+                        <p class="proj-card__role">Electrical Designer &amp; Developer</p>
+                        <span class="proj-card__arrow" aria-hidden="true">→</span>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- ── NAVIGATION TILES ────────────────────────── -->
+        <div class="landing-tiles">
+
+            <a href="engineering.html" class="landing-tile">
+                <div class="landing-tile__inner">
+                    <p class="landing-tile__label mono">II.</p>
+                    <h2 class="landing-tile__title">Engineering<br>Projects</h2>
+                    <p class="landing-tile__sub mono">DFR · DSRT · 2791 · Receipt Printer · Bridges</p>
+                    <span class="landing-tile__arrow" aria-hidden="true">→</span>
                 </div>
+            </a>
 
-                <div class="discipline__desc">
-                    <p>Works in stained glass, printmaking, and photography — material practices concerned with light, process, and the physical trace.</p>
+            <a href="art.html" class="landing-tile">
+                <div class="landing-tile__inner">
+                    <p class="landing-tile__label mono">III.</p>
+                    <h2 class="landing-tile__title">Art<br>Projects</h2>
+                    <p class="landing-tile__sub mono">Stained Glass · Printmaking · Photography</p>
+                    <span class="landing-tile__arrow" aria-hidden="true">→</span>
                 </div>
-
-                <div class="project-grid project-grid--art" role="list">
-
-                    <a href="art/glass.html" class="proj-card" role="listitem">
-                        <div class="proj-card__inner">
-                            <span class="proj-card__num">01</span>
-                            <h3 class="proj-card__title">Stained Glass</h3>
-                            <span class="proj-card__arrow" aria-hidden="true">→</span>
-                        </div>
-                    </a>
-
-                    <a href="art/printmaking.html" class="proj-card" role="listitem">
-                        <div class="proj-card__inner">
-                            <span class="proj-card__num">02</span>
-                            <h3 class="proj-card__title">Printmaking</h3>
-                            <span class="proj-card__arrow" aria-hidden="true">→</span>
-                        </div>
-                    </a>
-
-                    <a href="art/photo.html" class="proj-card" role="listitem">
-                        <div class="proj-card__inner">
-                            <span class="proj-card__num">03</span>
-                            <h3 class="proj-card__title">Photography</h3>
-                            <span class="proj-card__arrow" aria-hidden="true">→</span>
-                        </div>
-                    </a>
-
-                </div>
-            </section>
+            </a>
 
         </div>
+
     </main>
 
-    <!-- ============================================================
-         FOOTER
-    ============================================================ -->
     <footer class="footer">
         <div class="footer__perf" aria-hidden="true"></div>
         <div class="footer__inner">
@@ -329,8 +208,8 @@
             </div>
             <div class="footer__ornament" aria-hidden="true">◆</div>
             <div class="footer__right">
-                <p class="footer__contact"><a href="mailto:">Get in touch →</a></p>
-                <p class="footer__edition mono">Ed.&nbsp;MMXXVI</p>
+                <p class="footer__contact"><a href="mailto:jonah.d.hymes.28@dartmouth.edu">Get in touch →</a></p>
+                <p class="footer__edition mono"> &nbsp; </p>
             </div>
         </div>
     </footer>
