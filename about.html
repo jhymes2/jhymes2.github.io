@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About — Jonah Hymes">
+    <title>About — Jonah Hymes</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;1,300&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .fade-init { opacity: 0; transform: translateY(12px); transition: opacity 0.5s ease, transform 0.5s ease; }
+        .fade-init.in-view { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body>
+
+    <div class="reg-mark reg-mark--tl" aria-hidden="true"></div>
+    <div class="reg-mark reg-mark--tr" aria-hidden="true"></div>
+    <div class="reg-mark reg-mark--bl" aria-hidden="true"></div>
+    <div class="reg-mark reg-mark--br" aria-hidden="true"></div>
+
+    <nav class="nav" id="siteNav" aria-label="Site navigation">
+        <div class="nav__inner">
+            <a href="index.html" class="nav__logo" aria-label="Jonah Hymes — Home">
+                <span class="nav__logo-name">Jonah Hymes</span>
+                <span class="nav__logo-sub">Engineering &amp; Fine Art</span>
+            </a>
+            <a href="about.html" class="nav__about mono">About</a>
+            <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navOverlay">
+                <span>Index</span>
+                <span class="nav__toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="nav-overlay" id="navOverlay" aria-hidden="true" role="dialog" aria-label="Site index">
+        <div class="nav-overlay__inner">
+            <div class="nav-overlay__top">
+                <span class="nav-overlay__wordmark">Jonah Hymes</span>
+                <button class="nav-overlay__close" id="navClose">Close &nbsp;×</button>
+            </div>
+            <div class="nav-overlay__body">
+                <div>
+                    <p class="nav-overlay__section-label">Technical</p>
+                    <ul class="nav-overlay__list">
+                        <li><a href="technical/phillips.html"><span class="nav-item__num">01</span>Phillips</a></li>
+                        <li><a href="technical/mouse.html"><span class="nav-item__num">02</span>Micromouse</a></li>
+                        <li><a href="technical/miteout.html"><span class="nav-item__num">03</span>Miteout</a></li>
+                        <li><a href="technical/receipt-printer.html"><span class="nav-item__num">04</span>Receipt Printer</a></li>
+                        <li><a href="technical/dfr.html"><span class="nav-item__num">05</span>DFR</a></li>
+                        <li><a href="technical/robotics.html"><span class="nav-item__num">06</span>DSRT</a></li>
+                        <li><a href="technical/2791.html"><span class="nav-item__num">07</span>2791</a></li>
+                        <li><a href="technical/bridges.html"><span class="nav-item__num">08</span>Bridges</a></li>
+                    </ul>
+                </div>
+                <div class="nav-overlay__rule" aria-hidden="true"></div>
+                <div>
+                    <p class="nav-overlay__section-label">Art</p>
+                    <ul class="nav-overlay__list">
+                        <li><a href="art/glass.html"><span class="nav-item__num">01</span>Stained Glass</a></li>
+                        <li><a href="art/printmaking.html"><span class="nav-item__num">02</span>Printmaking</a></li>
+                        <li><a href="art/photo.html"><span class="nav-item__num">03</span>Photography</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-overlay__footer">
+                <a href="about.html">About</a>
+                <a href="mailto:">Contact</a>
+                <span class="nav-overlay__edition">Ed.&nbsp;MMXXVI</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-wrap">
+
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <span class="breadcrumb__sep" aria-hidden="true">/</span>
+            <span class="breadcrumb__current">About</span>
+        </nav>
+
+        <header class="page-hero">
+            <div class="page-hero__bg" aria-hidden="true"></div>
+            <div class="page-hero__content">
+                <p class="page-hero__section mono">Portfolio — MMXXVI</p>
+                <h1 class="page-hero__title">About</h1>
+            </div>
+        </header>
+
+        <div class="page-body">
+
+            <div class="about-layout">
+
+                <div class="about-headshot">
+                    <img src="images/About%20me/headshot.png" alt="Jonah Hymes">
+                </div>
+
+                <div class="about-bio">
+                    <h2>Jonah Hymes</h2>
+                    <p class="about-bio__sub mono">Engineering &amp; Fine Art · Dartmouth College</p>
+
+                    <p>Innovative engineering student with experience in robotics, entrepreneurship, and sustainable technology. Passionate about leveraging technical skills to design impactful solutions, especially in the field of environmental conservation.</p>
+
+                    <p>Raised in upstate New York, I've always been around nature and on trails. I hold an affinity for the outdoors and a strong passion to have a positive impact on the natural environments I grew up around.</p>
+
+                    <p>I love listening to music — current favorites are Fleetwood Mac and Mac DeMarco. I also love reading; favorite authors are Annie Dillard and Mary Oliver, particularly <em>Pilgrim at Tinker Creek</em> and <em>Upstream</em>.</p>
+                </div>
+
+            </div>
+
+            <div class="about-photos">
+                <div class="about-photo-item">
+                    <div class="img-placeholder" style="aspect-ratio:4/3;">
+                        <span class="img-placeholder__icon">[ Image ]</span>
+                    </div>
+                </div>
+                <div class="about-photo-item">
+                    <div class="img-placeholder" style="aspect-ratio:4/3;">
+                        <span class="img-placeholder__icon">[ Image ]</span>
+                    </div>
+                </div>
+                <div class="about-photo-item">
+                    <div class="img-placeholder" style="aspect-ratio:4/3;">
+                        <span class="img-placeholder__icon">[ Image ]</span>
+                    </div>
+                </div>
+                <div class="about-photo-item">
+                    <div class="img-placeholder" style="aspect-ratio:4/3;">
+                        <span class="img-placeholder__icon">[ Image ]</span>
+                    </div>
+                </div>
+                <div class="about-photo-item">
+                    <div class="img-placeholder" style="aspect-ratio:4/3;">
+                        <span class="img-placeholder__icon">[ Image ]</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <footer class="footer">
+            <div class="footer__perf" aria-hidden="true"></div>
+            <div class="footer__inner">
+                <div class="footer__left">
+                    <p class="footer__name">Jonah Hymes</p>
+                    <p class="footer__sub">Engineering &amp; Fine Art</p>
+                </div>
+                <div class="footer__ornament" aria-hidden="true">◆</div>
+                <div class="footer__right">
+                    <p class="footer__contact"><a href="mailto:">Get in touch →</a></p>
+                    <p class="footer__edition mono">Ed.&nbsp;MMXXVI</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

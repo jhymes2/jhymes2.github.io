@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Micromouse — Jonah Hymes Technical Portfolio">
-    <title>Micromouse — Jonah Hymes</title>
+    <meta name="description" content="Bridges — Jonah Hymes Technical Portfolio">
+    <title>Bridges — Jonah Hymes</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -60,9 +60,9 @@
                 <div>
                     <p class="nav-overlay__section-label">Art</p>
                     <ul class="nav-overlay__list">
-                        <li><a href="../art/glass.html"><span class="nav-item__num">01</span>Glass</a></li>
+                        <li><a href="../art/glass.html"><span class="nav-item__num">01</span>Stained Glass</a></li>
                         <li><a href="../art/printmaking.html"><span class="nav-item__num">02</span>Printmaking</a></li>
-                        <li><a href="../art/photo.html"><span class="nav-item__num">03</span>Photo</a></li>
+                        <li><a href="../art/photo.html"><span class="nav-item__num">03</span>Photography</a></li>
                     </ul>
                 </div>
             </div>
@@ -80,31 +80,31 @@
             <span class="breadcrumb__sep" aria-hidden="true">/</span>
             <a href="../index.html#work">Technical</a>
             <span class="breadcrumb__sep" aria-hidden="true">/</span>
-            <span class="breadcrumb__current">Micromouse</span>
+            <span class="breadcrumb__current">Bridges</span>
         </nav>
 
         <header class="page-hero">
             <div class="page-hero__bg" aria-hidden="true"></div>
             <div class="page-hero__content">
-                <p class="page-hero__section mono">Technical — 02</p>
-                <h1 class="page-hero__title">Micromouse</h1>
-                <p class="page-hero__role">Computer Engineering Intern</p>
+                <p class="page-hero__section mono">Technical — 08</p>
+                <h1 class="page-hero__title">Bridges</h1>
+                <p class="page-hero__role">School Projects</p>
                 <div class="page-hero__meta">
                     <div class="meta-item">
                         <span class="meta-item__label">Type</span>
-                        <span class="meta-item__value">Electrical Design, PCB Layout, Embedded Programming</span>
+                        <span class="meta-item__value">Mechanical Engineering</span>
                     </div>
                     <div class="meta-item">
                         <span class="meta-item__label">Status</span>
-                        <span class="meta-item__value">Complete</span>
+                        <span class="meta-item__value">Completed</span>
                     </div>
                     <div class="meta-item">
-                        <span class="meta-item__label">Year</span>
-                        <span class="meta-item__value">2024 – 2025</span>
+                        <span class="meta-item__label">Years</span>
+                        <span class="meta-item__value">2023 &amp; 2025</span>
                     </div>
                     <div class="meta-item">
-                        <span class="meta-item__label">Stack</span>
-                        <span class="meta-item__value">Hardware / CAD / Software</span>
+                        <span class="meta-item__label">Tools</span>
+                        <span class="meta-item__value">SolidWorks, Illustrator, Laser Engraver</span>
                     </div>
                 </div>
             </div>
@@ -112,81 +112,87 @@
 
         <div class="page-body">
 
-            <img src="../images/Mouse/IMG_7277.png" alt="Micromouse PCB — final 3D render, angled view" style="width:100%; display:block; margin-bottom: var(--space-xl); border: 1px solid rgba(26,58,92,0.1);">
+            <div class="img-placeholder img-placeholder--hero" style="padding:0;overflow:hidden;" aria-label="Project hero image">
+                <img src="../images/Bridges/Capital%20Bridge%202.png" alt="Capital Region Bridge Competition" style="width:100%;height:100%;object-fit:cover;display:block;">
+            </div>
 
             <div class="page-columns">
                 <div class="text-block">
-                    <h2>Overview</h2>
+
+                    <h2>Capital Region Bridge Competition — 2023</h2>
                     <p>
-                        Designed 10+ custom STM32-based micromouse PCBs for Dartmouth graduate classes, replacing bulky development kits to cut costs and tailor hardware to course requirements. The board integrates dual motors, encoders, an IMU, distance sensors, and Wi-Fi — all on a compact footprint purpose-built for maze-solving robotics.
-                    </p>
-                    <p>
-                        Integrated and debugged PWM, SPI, I2C, and UART communication across all peripherals using oscilloscope, multimeter, and STM32CubeIDE. The platform enabled graduate students to program 3–5 micromouse robots to autonomously map mazes via Wi-Fi coordination.
-                    </p>
-                    <p>
-                        Components were specified and PCB layouts optimized in KiCad for compactness and manufacturing reliability.
+                        Competed in the Capital Region Bridge Building Competition, designing, building, and assembling a bridge optimized to hold maximum weight at minimum mass. Structural analysis was performed in ModelSmart. The bridge set a new student record by holding 968 lbs — placing first in weight held, first in weight-to-mass efficiency, and third in bridge aesthetics.
                     </p>
 
-                    <h2 style="margin-top: 2rem;">Process</h2>
+                    <h2 style="margin-top: 2rem;">Dartmouth Solid Mechanics Bridge — 2025</h2>
                     <p>
-                        Began by working with students and the course instructor to understand the constraints and failure modes of the existing mice, then produced a requirements list from that audit. Electrical components were sourced individually and bench-tested to confirm they met spec before committing to layout. The PCB was designed in KiCad around those validated components, followed by firmware development to bring all peripherals under unified software control.
+                        Designed and fabricated a plywood bridge for Dartmouth's Solid Mechanics course. Produced hand truss force calculations and used SolidWorks FEA to predict deflection and maximum load. Laser cut and assembled the bridge with controlled joints.
                     </p>
+
                 </div>
 
                 <aside class="sidebar-details" aria-label="Project details">
                     <p class="sidebar-details__label">Spec Sheet</p>
                     <div class="detail-row">
-                        <span class="detail-row__key">Category</span>
-                        <span class="detail-row__val">PCB / Embedded</span>
+                        <span class="detail-row__key">2023 Weight Held</span>
+                        <span class="detail-row__val">968 lbs</span>
                     </div>
                     <div class="detail-row">
-                        <span class="detail-row__key">Year</span>
-                        <span class="detail-row__val">2024 – 2025</span>
+                        <span class="detail-row__key">Placement</span>
+                        <span class="detail-row__val">1st weight, 1st efficiency, 3rd aesthetics</span>
                     </div>
                     <div class="detail-row">
-                        <span class="detail-row__key">Role</span>
-                        <span class="detail-row__val">Computer Engineering Intern</span>
+                        <span class="detail-row__key">2025 Max Load</span>
+                        <span class="detail-row__val">9.339 kN</span>
                     </div>
                     <div class="detail-row">
-                        <span class="detail-row__key">MCU</span>
-                        <span class="detail-row__val">STM32</span>
+                        <span class="detail-row__key">2025 Deflection @ 1 kN</span>
+                        <span class="detail-row__val">0.3922 mm</span>
                     </div>
                     <div class="detail-row">
-                        <span class="detail-row__key">Tools</span>
-                        <span class="detail-row__val">KiCad, STM32CubeIDE, Onshape</span>
+                        <span class="detail-row__key">2025 Bridge Weight</span>
+                        <span class="detail-row__val">668.1 g</span>
+                    </div>
+                        <div class="detail-row">
+                        <span class="detail-row__key">2023 Bridge Weight</span>
+                        <span class="detail-row__val">225g</span>
                     </div>
                     <div class="detail-row">
-                        <span class="detail-row__key">Comms</span>
-                        <span class="detail-row__val">PWM, SPI, I2C, UART, Wi-Fi</span>
-                    </div>
-                    <div class="detail-row">
-                        <span class="detail-row__key">Quantity</span>
-                        <span class="detail-row__val">10+ boards</span>
+                        <span class="detail-row__key">Analysis</span>
+                        <span class="detail-row__val">ModelSmart, SolidWorks FEA</span>
                     </div>
                 </aside>
             </div>
 
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="../images/Mouse/IMG_3575.png" alt="Micromouse PCB — component placement render, top view" style="width:100%; aspect-ratio:4/3; object-fit:cover;">
-                    <p class="gallery-item__caption">Component placement — 3D render, top view</p>
+                    <img src="../images/Bridges/Capital%20Bridge%201.jpg" alt="Capital Region bridge — detail" style="width:100%;height:auto;display:block;">
+                    <p class="gallery-item__caption">Capital Region — detail</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="../images/Mouse/IMG_3599.png" alt="Micromouse PCB — KiCad routing layout" style="width:100%; aspect-ratio:4/3; object-fit:cover;">
-                    <p class="gallery-item__caption">PCB routing layout — KiCad</p>
+                    <img src="../images/Bridges/Capital%20Bridge%203.png" alt="Capital Region bridge — load test" style="width:100%;height:auto;display:block;">
+                    <p class="gallery-item__caption">Capital Region — load test</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="../images/Mouse/IMG_7277.png" alt="Micromouse PCB — final 3D render, perspective" style="width:100%; aspect-ratio:4/3; object-fit:cover;">
-                    <p class="gallery-item__caption">Final board — 3D render, perspective view</p>
+                    <img src="../images/Bridges/solid%20mechanics%201.png" alt="Solid Mechanics bridge — 1" style="width:100%;height:auto;display:block;">
+                    <p class="gallery-item__caption">Solid Mechanics — assembly</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/Bridges/solid%20mechanics%202.png" alt="Solid Mechanics bridge — 2" style="width:100%;height:auto;display:block;">
+                    <p class="gallery-item__caption">Solid Mechanics — detail</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/Bridges/solid%20mechanics%203.jpg" alt="Solid Mechanics bridge — 3" style="width:100%;height:auto;display:block;">
+                    <p class="gallery-item__caption">Solid Mechanics — load test</p>
                 </div>
             </div>
 
         </div>
 
         <nav class="page-nav" aria-label="Project navigation">
-            <a href="phillips.html" class="page-nav__link page-nav__link--prev">Phillips</a>
+            <a href="2791.html" class="page-nav__link page-nav__link--prev">2791</a>
             <a href="../index.html" class="page-nav__home mono">↑ All Work</a>
-            <a href="miteout.html" class="page-nav__link page-nav__link--next">Miteout</a>
+            <a href="../art/glass.html" class="page-nav__link page-nav__link--next">Stained Glass</a>
         </nav>
 
         <footer class="footer">
@@ -209,4 +215,3 @@
     <script src="../js/main.js"></script>
 </body>
 </html>
-

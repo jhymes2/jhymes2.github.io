@@ -184,6 +184,22 @@ body::before {
     text-transform: uppercase;
 }
 
+.nav__about {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    text-decoration: none;
+    transition: color 0.2s;
+    margin-right: auto;
+    padding-left: var(--space-md);
+}
+
+.nav__about:hover {
+    color: var(--blue-deep);
+}
+
 .nav__toggle {
     display: flex;
     align-items: center;
@@ -681,15 +697,15 @@ body::before {
 
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     border: 1px solid rgba(26, 58, 92, 0.12);
     background: rgba(26, 58, 92, 0.08);
     gap: 1px;
 }
 
-.project-grid--art {
-    grid-template-columns: repeat(3, 1fr);
-}
+.project-grid--3   { grid-template-columns: repeat(3, 1fr); }
+.project-grid--4   { grid-template-columns: repeat(4, 1fr); }
+.project-grid--5   { grid-template-columns: repeat(5, 1fr); }
+.project-grid--art { grid-template-columns: repeat(3, 1fr); }
 
 .proj-card {
     background: var(--paper);

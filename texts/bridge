@@ -1,0 +1,20 @@
+Title: Bridge Competitions
+Display Role: School Projects
+Status: Completed
+Year: 2023 / 2025
+Stack: Mechanical Engineering
+Tools: Adobe illustrator, Solidworks, Laser Engraver, Stress Strain Analysis
+
+Competed in Capital Region Bridge Building Competiition, designing, building, and assembling a bridge optimized for holding large weight while being as light as possible. Design analysis was done in modelsmart. Bridge Set a new student record by holding 968 lbs, placing first in weight held, first in weight to mass efficiency, and third in bridge aestetics.
+
+Designed and fabricated a bridge from plywood for Dartmouth's Solid Mechanics Class
+Created hand truss force calculations and used solidworks FEA to predict deflection and max load held. Laser cut and assembled bridge with controlled joints
+
+Deflection at 1 kN (mm)
+0.3922
+
+max load held (kn)
+9.339
+
+Weight (g)
+668.1
