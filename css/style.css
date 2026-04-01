@@ -776,6 +776,30 @@ body::before {
     transform: translateX(0);
 }
 
+.proj-card__role {
+    font-family: var(--font-mono);
+    font-size: 0.58rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    margin-top: 3px;
+    transition: color 0.22s;
+}
+
+.proj-card:hover .proj-card__role {
+    color: rgba(255,255,255,0.55);
+}
+
+/* page-hero role subtitle */
+.page-hero__role {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--blue-mid);
+    margin-bottom: var(--space-md);
+}
+
 /* Hover accent bar on top */
 .proj-card::after {
     content: '';

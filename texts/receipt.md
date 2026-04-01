@@ -1,4 +1,5 @@
 Title: Receipt Printer Project
+Role: personal project
 Status: Ongoing
 Year: 2026 - Present
 Stack: Software, Embedded Programming
